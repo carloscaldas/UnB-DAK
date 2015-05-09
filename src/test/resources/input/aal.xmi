@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_WF_10PAZEeS52fQEDlpUVQ" name="aal">
+  <eAnnotations xmi:id="_WGC5IPAZEeS52fQEDlpUVQ" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_WGDgMPAZEeS52fQEDlpUVQ" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_WGDgMfAZEeS52fQEDlpUVQ" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_WGDgMvAZEeS52fQEDlpUVQ" name="Activity">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgM_AZEeS52fQEDlpUVQ" name="locals"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_WGDgNPAZEeS52fQEDlpUVQ" name="Initial Node" outgoing="_WGDgQvAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgNfAZEeS52fQEDlpUVQ" name="Emergency situation occurs" outgoing="_WGDgRPAZEeS52fQEDlpUVQ" incoming="_WGDgQvAZEeS52fQEDlpUVQ" behavior="_WGDgXPAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgNvAZEeS52fQEDlpUVQ" name="Sensors detected emergency" outgoing="_WGDgRvAZEeS52fQEDlpUVQ" incoming="_WGDgTPAZEeS52fQEDlpUVQ" behavior="_WGDgXvAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgN_AZEeS52fQEDlpUVQ" name="Assisted person raises alarm" outgoing="_WGDgSPAZEeS52fQEDlpUVQ" incoming="_WGDgTvAZEeS52fQEDlpUVQ" behavior="_WGDgYPAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgOPAZEeS52fQEDlpUVQ" name="System notifies assisted person about detected emergency" outgoing="_WGDgSvAZEeS52fQEDlpUVQ" incoming="_WGDgRvAZEeS52fQEDlpUVQ" behavior="_WGDgYvAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_WGDgOfAZEeS52fQEDlpUVQ" name="Decision-Merge" outgoing="_WGDgTPAZEeS52fQEDlpUVQ _WGDgTvAZEeS52fQEDlpUVQ" incoming="_WGDgRPAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_WGDgOvAZEeS52fQEDlpUVQ" name="Decision-Merge1" outgoing="_WGDgUPAZEeS52fQEDlpUVQ" incoming="_WGDgSPAZEeS52fQEDlpUVQ _WGDgSvAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgO_AZEeS52fQEDlpUVQ" name="Alarm canceled?" incoming="_WGDgUPAZEeS52fQEDlpUVQ" behavior="_WGDgZPAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgPPAZEeS52fQEDlpUVQ" name="Assisted person cancels the alarm" outgoing="_WGDgUvAZEeS52fQEDlpUVQ" incoming="_WGDgWPAZEeS52fQEDlpUVQ" behavior="_WGDgZvAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgPfAZEeS52fQEDlpUVQ" name="Medical and personal info retrieved" outgoing="_WGDgVPAZEeS52fQEDlpUVQ" incoming="_WGDgWvAZEeS52fQEDlpUVQ" behavior="_WGDgaPAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgPvAZEeS52fQEDlpUVQ" name="Messages acknowledges alarm notification" outgoing="_WGDgVvAZEeS52fQEDlpUVQ" incoming="_WGDgVPAZEeS52fQEDlpUVQ" behavior="_WGDgbPAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_WGDgP_AZEeS52fQEDlpUVQ" name="Decision-Merge2" outgoing="_WGDgWPAZEeS52fQEDlpUVQ _WGDgWvAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_WGDgQPAZEeS52fQEDlpUVQ" name="Activity Final Node" incoming="_WGDgUvAZEeS52fQEDlpUVQ"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_WGDgQfAZEeS52fQEDlpUVQ" name="Activity Final Node1" incoming="_WGDgVvAZEeS52fQEDlpUVQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgQvAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgNPAZEeS52fQEDlpUVQ" target="_WGDgNfAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgQ_AZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgRPAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgNfAZEeS52fQEDlpUVQ" target="_WGDgOfAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgRfAZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgRvAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgNvAZEeS52fQEDlpUVQ" target="_WGDgOPAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgR_AZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgSPAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgN_AZEeS52fQEDlpUVQ" target="_WGDgOvAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgSfAZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgSvAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgOPAZEeS52fQEDlpUVQ" target="_WGDgOvAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgS_AZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgTPAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgOfAZEeS52fQEDlpUVQ" target="_WGDgNvAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgTfAZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgTvAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgOfAZEeS52fQEDlpUVQ" target="_WGDgN_AZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgT_AZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgUPAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgOvAZEeS52fQEDlpUVQ" target="_WGDgO_AZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgUfAZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgUvAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgPPAZEeS52fQEDlpUVQ" target="_WGDgQPAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgU_AZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgVPAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgPfAZEeS52fQEDlpUVQ" target="_WGDgPvAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgVfAZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgVvAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgPvAZEeS52fQEDlpUVQ" target="_WGDgQfAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgV_AZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgWPAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgP_AZEeS52fQEDlpUVQ" target="_WGDgPPAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgWfAZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_WGDgWvAZEeS52fQEDlpUVQ" name="ControlFlow" source="_WGDgP_AZEeS52fQEDlpUVQ" target="_WGDgPfAZEeS52fQEDlpUVQ">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_WGDgW_AZEeS52fQEDlpUVQ" value="1"/>
+    </edge>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgXPAZEeS52fQEDlpUVQ" name="Emergency situation occurs">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgXfAZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgXvAZEeS52fQEDlpUVQ" name="Sensors detected emergency">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgX_AZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgYPAZEeS52fQEDlpUVQ" name="Assisted person raises alarm">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgYfAZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgYvAZEeS52fQEDlpUVQ" name="System notifies assisted person about detected emergency">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgY_AZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgZPAZEeS52fQEDlpUVQ" name="Alarm canceled?">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgZfAZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgZvAZEeS52fQEDlpUVQ" name="Assisted person cancels the alarm">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgZ_AZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgaPAZEeS52fQEDlpUVQ" name="Medical and personal info retrieved">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgafAZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgavAZEeS52fQEDlpUVQ" name="System requests emergency vehicle">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDga_AZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_WGDgbPAZEeS52fQEDlpUVQ" name="Messages acknowledges alarm notification">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgbfAZEeS52fQEDlpUVQ" name="locals"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_WGDgbvAZEeS52fQEDlpUVQ" name="Activity1">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_WGDgb_AZEeS52fQEDlpUVQ" name="locals"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_WGDgcPAZEeS52fQEDlpUVQ" name="Call Behavior"/>
+  </packagedElement>
+</uml:Model>

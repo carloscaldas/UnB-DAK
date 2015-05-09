@@ -1,0 +1,25 @@
+ext { pName = ""; pVersion = ""}
+apply from: 'src/main/resources/application.properties'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+
+task fatJar(type: Jar) {
+	manifest {
+		attributes 'Implementation-Title': 'UnB Dependabilitu Analysis Kit',
+			'Implementation-Version': pVersion
+	}
+	baseName = pName
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	with jar
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', includes: ['*.jar'])
+}
+
+// gradle wrapper
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
