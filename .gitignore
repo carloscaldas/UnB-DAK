@@ -14,5 +14,8 @@ hs_err_pid*
 /bin/
 .classpath
 .project
+.gradle
 org.eclipse.jdt.core.prefs
 /.settings/
+
+!/gradle/wrapper/gradle-wrapper.jar
